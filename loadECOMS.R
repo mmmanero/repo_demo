@@ -36,6 +36,7 @@ loadECOMS <- function(dataset, var, dictionary = TRUE,
                   stop("Invalid season definition")
             }
       }
+Rodri paquete, te enteras menos que yo
       # Exception in NCEP due to different grids within the same dataset
       if (dataset == "NCEP") {
             if (length(lonLim) == 1 || length(latLim) == 1) {
@@ -67,6 +68,8 @@ loadECOMS <- function(dataset, var, dictionary = TRUE,
             if (is.null(leadMonth) & dic$time_step != "static") {
                   stop("A lead month for forecast initialization must be specified")
             }
+            Otro comentario
+
             if (leadMonth < 0 & dic$time_step != "static") {
                   stop("Invalid lead time definition")
             }
@@ -113,6 +116,7 @@ loadECOMS <- function(dataset, var, dictionary = TRUE,
             out$Data <- aperm(out$Data, perm = b)    
             attr(out$Data, "dimensions")  <- dimNames
       }
+      Lo dejo asi y listos
       # Source Dataset and other metadata 
       attr(out, "dataset") <- dataset
       attr(out, "source") <- "ECOMS User Data Gateway" 
